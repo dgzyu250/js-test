@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample page</title>
+</head>
+
+<script type="text/javascript">
+	function MyInfo()
+	{
+		var msg=" ";
+		msg+="籍贯:"+document.getElementById("MyName").value+"\n";
+		msg+=" 昵称:"+document.getElementById("MyAddress").value+"\n";
+		msg+=" 电子邮件:"+document.getElementById("MyEmail").value+"\n";
+		alert(msg);
+		
+	}
+
+	function MyAlert()
+	{
+		var msg="\n提示信息: \n";
+		msg+="取消提交表单";
+		alert(msg);
+	}
+
+</script>
+
+<body>
+	<center>
+		<form name="MyForm" method=post; target="target.asp"
+		onsubmit="MyInfo()" onreset=" MyAlert()">
+		<legent>用户注册</legend>
+			<hr>
+			昵称：<input type="text" name="MyName" id="MyName" size=20><br>
+			密码：<input type="password" name="MyPassword" id="MyPassword" size=21><br>
+			籍贯：<input type="text" name="MyAddress" id="MyAddress" size=20><br>
+			电子邮件：<input type="text" name="MyEmail" id="MyEmail" size=20><br>
+			<input type="submit" value="注册">
+			<input type="reset"  value="取消">
+		</form>
+	</center>
+</body>
+</html>
